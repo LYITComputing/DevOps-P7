@@ -1,6 +1,5 @@
 package revolut;
 
-import java.util.Currency;
 
 public class Account {
     private Currency accCurrency;
@@ -21,5 +20,11 @@ public class Account {
 
     public void addFunds(double topUpAmount) {
         this.balance += topUpAmount;
+    }
+
+    public Currency getCurrency()
+    {
+        return this.accCurrency;
+
     }
 }

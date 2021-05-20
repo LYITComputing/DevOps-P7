@@ -1,0 +1,1655 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-20T19:45:11.981Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6001400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Buy Bitcoin using Bank Account",
+        "description": "",
+        "id": "buy-crypto;buy-bitcoin-using-bank-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1997100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Danny has 0 BTC in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 10
+                },
+                {
+                  "val": "BTC",
+                  "offset": 12
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1004100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Danny has 100 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Danny selects his EUR Account as his Buy method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 18
+                },
+                {
+                  "val": "Account",
+                  "offset": 22
+                }
+              ],
+              "location": "features.StepDefinitions.dannySelectsHisEuroAccountAsHisBuyMethod(java.lang.String,revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7999100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Danny purchases BTC with 100 EUR",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 16
+                },
+                {
+                  "val": "100",
+                  "offset": 25
+                },
+                {
+                  "val": "EUR",
+                  "offset": 29
+                }
+              ],
+              "location": "features.StepDefinitions.dannyPurchasesBitcoinWithEuro(java.lang.String,int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7999200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The new balance of his BTC account should now be 0.0034",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 23
+                },
+                {
+                  "val": "0.0034",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.123Z",
+        "before": [
+          {
+            "result": {
+              "duration": 999500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Sell Bitcoin using Bank Account",
+        "description": "",
+        "id": "buy-crypto;sell-bitcoin-using-bank-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 998800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Danny has 0.0034 BTC in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0.0034",
+                  "offset": 10
+                },
+                {
+                  "val": "BTC",
+                  "offset": 17
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Danny selects 0.0034 BTC to Sell back to EUR",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0.0034",
+                  "offset": 14
+                },
+                {
+                  "val": "BTC",
+                  "offset": 21
+                },
+                {
+                  "val": "EUR",
+                  "offset": 41
+                }
+              ],
+              "location": "features.StepDefinitions.dannySelectsBTCToSellBackToEUR(java.lang.Double,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Danny Sells Bitcoin",
+            "match": {
+              "location": "features.StepDefinitions.dannySellsBitcoin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1002600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The new balance of his BTC account should now be 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 23
+                },
+                {
+                  "val": "0",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1002600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The new balance of his EUR account should now be 108.46180199999999",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "108.46180199999999",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.139Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "Transfer Between various Revolut Currencies",
+        "description": "",
+        "id": "buy-crypto;transfer-between-various-revolut-currencies;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 995100,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny has 0 BTC in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 10
+                },
+                {
+                  "val": "BTC",
+                  "offset": 12
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny has 100 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999800,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Danny selects his EUR Account as his Buy method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 18
+                },
+                {
+                  "val": "Account",
+                  "offset": 22
+                }
+              ],
+              "location": "features.StepDefinitions.dannySelectsHisEuroAccountAsHisBuyMethod(java.lang.String,revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Danny purchases BTC with 100 EUR",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 16
+                },
+                {
+                  "val": "100",
+                  "offset": 25
+                },
+                {
+                  "val": "EUR",
+                  "offset": 29
+                }
+              ],
+              "location": "features.StepDefinitions.dannyPurchasesBitcoinWithEuro(java.lang.String,int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "The new balance of his BTC account should now be 0.0034",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 23
+                },
+                {
+                  "val": "0.0034",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "The new balance of his EUR account should now be 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "0",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.154Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "Transfer Between various Revolut Currencies",
+        "description": "",
+        "id": "buy-crypto;transfer-between-various-revolut-currencies;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 998100,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny has 0 BTC in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 10
+                },
+                {
+                  "val": "BTC",
+                  "offset": 12
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny has 100 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Danny selects his EUR Account as his Buy method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 18
+                },
+                {
+                  "val": "Account",
+                  "offset": 22
+                }
+              ],
+              "location": "features.StepDefinitions.dannySelectsHisEuroAccountAsHisBuyMethod(java.lang.String,revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000800,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Danny purchases BTC with 100 EUR",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 16
+                },
+                {
+                  "val": "100",
+                  "offset": 25
+                },
+                {
+                  "val": "EUR",
+                  "offset": 29
+                }
+              ],
+              "location": "features.StepDefinitions.dannyPurchasesBitcoinWithEuro(java.lang.String,int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "The new balance of his BTC account should now be 0.0034",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 23
+                },
+                {
+                  "val": "0.0034",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "The new balance of his EUR account should now be 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "0",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.166Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "Transfer Between various Revolut Currencies",
+        "description": "",
+        "id": "buy-crypto;transfer-between-various-revolut-currencies;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny has 0 BTC in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 10
+                },
+                {
+                  "val": "BTC",
+                  "offset": 12
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny has 100 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Danny selects his EUR Account as his Buy method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 18
+                },
+                {
+                  "val": "Account",
+                  "offset": 22
+                }
+              ],
+              "location": "features.StepDefinitions.dannySelectsHisEuroAccountAsHisBuyMethod(java.lang.String,revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1004400,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Danny purchases BTC with 100 EUR",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 16
+                },
+                {
+                  "val": "100",
+                  "offset": 25
+                },
+                {
+                  "val": "EUR",
+                  "offset": 29
+                }
+              ],
+              "location": "features.StepDefinitions.dannyPurchasesBitcoinWithEuro(java.lang.String,int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998600,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "The new balance of his BTC account should now be 0.0034",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 23
+                },
+                {
+                  "val": "0.0034",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "The new balance of his EUR account should now be 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "0",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.179Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "Transfer Between various Revolut Currencies",
+        "description": "",
+        "id": "buy-crypto;transfer-between-various-revolut-currencies;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny has 0 BTC in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 10
+                },
+                {
+                  "val": "BTC",
+                  "offset": 12
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1002300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny has 100 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1001400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Danny selects his EUR Account as his Buy method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 18
+                },
+                {
+                  "val": "Account",
+                  "offset": 22
+                }
+              ],
+              "location": "features.StepDefinitions.dannySelectsHisEuroAccountAsHisBuyMethod(java.lang.String,revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Danny purchases BTC with 100 EUR",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 16
+                },
+                {
+                  "val": "100",
+                  "offset": 25
+                },
+                {
+                  "val": "EUR",
+                  "offset": 29
+                }
+              ],
+              "location": "features.StepDefinitions.dannyPurchasesBitcoinWithEuro(java.lang.String,int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000600,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "The new balance of his BTC account should now be 0.0034",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BTC",
+                  "offset": 23
+                },
+                {
+                  "val": "0.0034",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "The new balance of his EUR account should now be 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "0",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Buy Crypto",
+    "description": "  This feature describes various scenarios for Buying Crypto Currency",
+    "id": "buy-crypto",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/BuyCrypto.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-20T19:45:12.199Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Add money to Revolut account using debit card",
+        "description": "",
+        "id": "topup-account;add-money-to-revolut-account-using-debit-card",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Danny has 10 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 13
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 998500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Danny selects 100 EUR as the topUp amount",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_euro_as_the_top_up_amount(double)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Danny selects his DebitCard as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Danny tops up",
+            "match": {
+              "location": "features.StepDefinitions.danny_tops_up()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The new balance of his EUR account should now be 110",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "110",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.230Z",
+        "before": [
+          {
+            "result": {
+              "duration": 999500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Add money to Revolut account using bank account",
+        "description": "",
+        "id": "topup-account;add-money-to-revolut-account-using-bank-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Danny has 20 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 13
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Danny selects 230 EUR as the topUp amount",
+            "match": {
+              "arguments": [
+                {
+                  "val": "230",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_euro_as_the_top_up_amount(double)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 998400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Danny selects his BankAccount as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BankAccount",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Danny tops up",
+            "match": {
+              "location": "features.StepDefinitions.danny_tops_up()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The new balance of his EUR account should now be 250",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "250",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.242Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "Add various amounts to Revolut account",
+        "description": "",
+        "id": "topup-account;add-various-amounts-to-revolut-account;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Danny has a starting balance of 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 32
+                }
+              ],
+              "location": "features.StepDefinitions.DannyHasAStartingBalanceOf(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny selects his DebitCard as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny now tops up by 100",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 21
+                }
+              ],
+              "location": "features.StepDefinitions.DannyNowTopsUpBy(java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The new balance of his EUR account should now be 100",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "100",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.254Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "Add various amounts to Revolut account",
+        "description": "",
+        "id": "topup-account;add-various-amounts-to-revolut-account;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Danny has a starting balance of 14",
+            "match": {
+              "arguments": [
+                {
+                  "val": "14",
+                  "offset": 32
+                }
+              ],
+              "location": "features.StepDefinitions.DannyHasAStartingBalanceOf(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny selects his DebitCard as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny now tops up by 20",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20",
+                  "offset": 21
+                }
+              ],
+              "location": "features.StepDefinitions.DannyNowTopsUpBy(java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The new balance of his EUR account should now be 34",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "34",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.265Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Add various amounts to Revolut account",
+        "description": "",
+        "id": "topup-account;add-various-amounts-to-revolut-account;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Danny has a starting balance of 23",
+            "match": {
+              "arguments": [
+                {
+                  "val": "23",
+                  "offset": 32
+                }
+              ],
+              "location": "features.StepDefinitions.DannyHasAStartingBalanceOf(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Danny selects his DebitCard as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Danny now tops up by 30",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30",
+                  "offset": 21
+                }
+              ],
+              "location": "features.StepDefinitions.DannyNowTopsUpBy(java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2997700,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The new balance of his EUR account should now be 53",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "53",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.285Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "Payment service rejects the request",
+        "description": "",
+        "id": ";payment-service-rejects-the-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Danny has 30 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 13
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Danny selects 100 EUR as the topUp amount",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_euro_as_the_top_up_amount(double)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 998200,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "Danny selects his DebitCard as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "The DebitCard Rejects the request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 4
+                }
+              ],
+              "location": "features.StepDefinitions.thePaymentServiceRejectsTheRequest(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Danny tops up",
+            "match": {
+              "location": "features.StepDefinitions.danny_tops_up()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000700,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "The new balance of his EUR account should now be 30",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "30",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-20T19:45:12.300Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "Payment service accepts the request",
+        "description": "",
+        "id": ";payment-service-accepts-the-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Danny has 30 EUR in his Revolut account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30",
+                  "offset": 10
+                },
+                {
+                  "val": "EUR",
+                  "offset": 13
+                }
+              ],
+              "location": "features.StepDefinitions.dannyHasEuroInHisEuroRevolutAccount(double,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Danny selects 100 EUR as the topUp amount",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 14
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_euro_as_the_top_up_amount(double)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Danny selects his DebitCard as his topUp method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 18
+                }
+              ],
+              "location": "features.StepDefinitions.danny_selects_his_debit_card_as_his_top_up_method(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "The DebitCard Accepts the request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DebitCard",
+                  "offset": 4
+                }
+              ],
+              "location": "features.StepDefinitions.theDebitCardAcceptsTheRequest(revolut.PaymentService)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Danny tops up",
+            "match": {
+              "location": "features.StepDefinitions.danny_tops_up()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000600,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "The new balance of his EUR account should now be 130",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EUR",
+                  "offset": 23
+                },
+                {
+                  "val": "130",
+                  "offset": 49
+                }
+              ],
+              "location": "features.StepDefinitions.theNewBalanceOfHisBTCAccountShouldNowBe(java.lang.String,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "TopUp Account",
+    "description": "  This feature describes various scenarios for users adding funds to their revolut account(s)",
+    "id": "topup-account",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TopUp.feature",
+    "tags": []
+  }
+]

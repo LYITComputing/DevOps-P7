@@ -20,8 +20,8 @@ public class Person {
         userAccounts.put("EUR", euroAccount);
     }
 
-    public void setAccountBalance(double startingBlanace) {
-        userAccounts.get("EUR").setBalance(startingBlanace);
+    public void setAccountBalance(double startingBalance) {
+        userAccounts.get("EUR").setBalance(startingBalance);
     }
 
     public double getAccountBalance(String eur) {
@@ -30,5 +30,20 @@ public class Person {
 
     public Account getAccount(String account) {
         return userAccounts.get(account);
+    }
+
+    public void topupAccount(double topupAmount, DebitCard card, PaymentService topupRequest){
+        if(topupRequest.approveRequest(card, topupAmount)) {
+            double newBalance = userAccounts.get("EUR").getBalance() + topupAmount;
+            this.setAccountBalance(newBalance);
+        }
+        else{
+            System.out.println("Topup Request Not Approved");
+        }
+    }
+
+    public void pay(double amount){
+        double newBalance = userAccounts.get("EUR").getBalance() - amount;
+        this.setAccountBalance(newBalance);
     }
 }

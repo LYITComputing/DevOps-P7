@@ -10,4 +10,13 @@ public class PaymentService {
     public String getType() {
         return serviceName;
     }
+
+    public boolean approveRequest(DebitCard card, double transactionAmount){
+        if(card.getBalance() > transactionAmount){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

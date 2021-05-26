@@ -20,8 +20,8 @@ public class Person {
         userAccounts.put("EUR", euroAccount);
     }
 
-    public void setAccountBalance(double startingBlanace) {
-        userAccounts.get("EUR").setBalance(startingBlanace);
+    public void setAccountBalance(double startingBalance) {
+        userAccounts.get("EUR").setBalance(startingBalance);
     }
 
     public double getAccountBalance(String eur) {
@@ -30,5 +30,28 @@ public class Person {
 
     public Account getAccount(String account) {
         return userAccounts.get(account);
+    }
+
+    public void send(Person person, Double sendMoney) {
+
+        if(this.getAccount("EUR").getBalance() >= sendMoney){
+
+            person.getAccount("EUR").receiveTransfer(sendMoney);
+            this.getAccount("EUR").setBalance(this.getAccount("EUR").getBalance() - sendMoney );
+
+        }
+    }
+
+    public void splitBill(Person person, Double bill) {
+
+        bill = bill / 2.0;
+
+        if((this.getAccount("EUR").getBalance() > bill && person.getAccount("EUR").getBalance() > bill) ) {
+
+            this.setAccountBalance(this.getAccount("EUR").getBalance() - bill);
+            person.setAccountBalance(person.getAccount("EUR").getBalance() - bill);
+
+        }
+
     }
 }

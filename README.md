@@ -22,7 +22,6 @@ After completing this practical exercise, you will be able to:
    a.  Preforming a currency exchange. For example, transferring money from a user’s euro to another currency eg. USD.  
    b.  Sending money to a friend using Revolut.  
    c.  Splitting a bill between your friends.  
-   d.  Buying crypto currency using Revolut.  
 
 4. Using Junit or TestNG test your implementation of the scenarios.
 5. Create a repository on GitHub and upload your project to the repository.

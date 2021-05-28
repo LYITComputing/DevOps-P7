@@ -19,7 +19,11 @@ public class Account {
         return this.balance;
     }
 
-    public void addFunds(double topUpAmount) {
-        this.balance += topUpAmount;
+    public void addFunds(double topUpAmount, PaymentService paymentService) {
+        if(PaymentService.canTransferFromAccount(paymentService.getType())){
+            this.balance += topUpAmount;
+        }else{
+            return;
+        }
     }
 }

@@ -1,3 +1,4 @@
+@TopUp
 Feature: TopUp Account
   This feature describes various scenarios for users adding funds to their revolut account(s)
 
@@ -40,5 +41,26 @@ Feature: TopUp Account
   Rule: The account balance shouldn't change if the topup payment request is rejected by the payment service
 
     #The scenarios below will need a payment service that accepts or rejects a request to add funds
-    Scenario: Payment service rejects the request
-    Scenario: Payment service accepts the request
+    Scenario Outline: Payment service rejects the request
+      Given Danny has 0 euro in his euro Revolut account
+      And Danny selects his DebitCard as his topUp method
+      And this DebitCard has balance of <serviceBalance>
+      When Danny selects <topUpAmount> euro as the topUp amount
+      Then Payment Service transfer should reject
+      Examples:
+        | serviceBalance| topUpAmount |
+        | 0           | 100         |
+        | -10         | 20          |
+        | 500        | 500.01        |
+
+    Scenario Outline: Payment service accepts the request
+      Given Danny has 0 euro in his euro Revolut account
+      And Danny selects his DebitCard as his topUp method
+      And this DebitCard has balance of <serviceBalance>
+      When Danny selects <topUpAmount> euro as the topUp amount
+      Then Payment Service transfer should accept
+      Examples:
+        | serviceBalance| topUpAmount |
+        | 100         | 100         |
+        | 50        | 20          |
+        | 400        | 250      |

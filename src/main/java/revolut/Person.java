@@ -1,7 +1,9 @@
 package revolut;
 
+import java.util.ArrayList;
 import java.util.Currency;
 import java.util.HashMap;
+import java.util.List;
 
 public class Person {
 
@@ -10,25 +12,52 @@ public class Person {
     // EUR 30
     // USD 50
     // STG 30
-    private HashMap<String, Account> userAccounts = new HashMap<String, Account>();
+    private List<Account> accounts = new ArrayList<>();
 
     public Person(String name){
         this.name = name;
         //Create a default euro account and add it the our userAccounts container
         Currency accCurrency = Currency.getInstance("EUR");
         Account euroAccount = new Account(accCurrency, 0);
-        userAccounts.put("EUR", euroAccount);
+        accounts.add(euroAccount);
+    }
+    public void addAccount(Account acc)
+    {
+        accounts.add(acc);
     }
 
-    public void setAccountBalance(double startingBlanace) {
-        userAccounts.get("EUR").setBalance(startingBlanace);
+    public void setAccountBalance(String accName, double startingBlanace) throws Exception {
+        Account acc = getAccount(accName);
+        if (acc == null)
+        {
+            addAccount(new Account(Currency.getInstance(accName),startingBlanace));
+        }
+        else {
+            acc.setBalance(startingBlanace);
+        }
     }
 
-    public double getAccountBalance(String eur) {
-        return userAccounts.get("EUR").getBalance();
+    public double getAccountBalance(String acc) throws Exception {
+
+        return getAccount(acc).getBalance();
     }
 
     public Account getAccount(String account) {
-        return userAccounts.get(account);
+        for (Account acc:
+                accounts) {
+            if (acc.getAccCurrency().getCurrencyCode().equals(account))
+                return acc;
+        }
+        return null;
     }
+    public void convertCurrency(String originatingAccount,  String destinationAccount,
+                                double conversionAmount, double exchangeRate)
+    {
+        getAccount(originatingAccount).removeFunds(conversionAmount);
+        double newCurrencyAmount = conversionAmount *  exchangeRate;
+        getAccount(destinationAccount).addFunds(newCurrencyAmount);
+    }
+
+
+
 }
